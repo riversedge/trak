@@ -1,0 +1,596 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\trak.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\trak.ico"
+IDR_TRAKTYPE            ICON                    "res\\trakDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+IDB_SPLASHPIC           BITMAP                  "res\\splashpi.bmp"
+IDB_COLORBAR            BITMAP                  "res\\ColorBar.BMP"
+IDB_TRAK                BITMAP                  "res\\Backgd.BMP"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_PLAY
+    BUTTON      ID_RECORD
+    BUTTON      ID_STOP
+    SEPARATOR
+    BUTTON      ID_MIXER
+    BUTTON      ID_VU_LVL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save as &Wave",               ID_SAVEWAVE
+        MENUITEM SEPARATOR
+        MENUITEM "Preferences",                 ID_PREFERENCES
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Wave"
+    BEGIN
+        MENUITEM "&Play",                       ID_PLAY
+        MENUITEM "&Record",                     ID_RECORD
+        MENUITEM "&Stop",                       ID_STOP
+        MENUITEM SEPARATOR
+        MENUITEM "Find No &Clip Zone",          IDD_FINDNOCLIP
+        MENUITEM SEPARATOR
+        MENUITEM "Load &Mixer",                 ID_MIXER
+        MENUITEM "Monitor &VU Levels",          ID_VU_LVL
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Trak...",              ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 217, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Trak Multitracking System"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Trak Version 2.0a",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2009\r\nRivers Edge Software",IDC_STATIC,40,25,119,23
+    DEFPUSHBUTTON   "OK",IDOK,178,7,32,14,WS_GROUP
+END
+
+IDD_TRAKMAIN DIALOGEX 20, 0, 339, 238
+STYLE DS_SETFONT | DS_3DLOOK | WS_CHILD | WS_BORDER
+EXSTYLE WS_EX_TRANSPARENT | WS_EX_STATICEDGE
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Slider1",IDC_MAINVOLUME,"msctls_trackbar32",WS_TABSTOP,232,14,105,10
+    LTEXT           "Main Volume",IDC_STATIC,262,5,42,8
+    GROUPBOX        "Track 1",IDC_STATIC,26,29,79,103
+    GROUPBOX        "Track 2",IDC_STATIC,104,29,79,103
+    GROUPBOX        "Track 3",IDC_STATIC,182,29,79,103
+    GROUPBOX        "Track 4",IDC_STATIC,260,29,79,103
+    GROUPBOX        "Track 5",IDC_STATIC,26,127,79,103
+    GROUPBOX        "Track 6",IDC_STATIC,104,127,79,103
+    GROUPBOX        "Track 7",IDC_STATIC,182,127,79,103
+    GROUPBOX        "Track 8",IDC_STATIC,260,127,79,103
+    EDITTEXT        IDC_TRACK1,30,39,69,12,ES_AUTOHSCROLL
+    CONTROL         "Slider1",IDC_VOLUME1,"msctls_trackbar32",TBS_VERT | WS_TABSTOP,48,57,9,42
+    CONTROL         "Slider1",IDC_PAN1,"msctls_trackbar32",TBS_VERT | WS_TABSTOP,76,57,9,42
+    LTEXT           "Volume",IDC_STATIC,40,98,24,8
+    LTEXT           "Pan",IDC_STATIC,74,98,14,8
+    CONTROL         "Mute",IDC_MUTE1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,50,113,32,10
+    EDITTEXT        IDC_TRACK2,108,39,69,12,ES_AUTOHSCROLL
+    CONTROL         "Slider1",IDC_VOLUME2,"msctls_trackbar32",TBS_VERT | WS_TABSTOP,126,57,9,42
+    CONTROL         "Slider1",IDC_PAN2,"msctls_trackbar32",TBS_VERT | WS_TABSTOP,154,57,9,42
+    LTEXT           "Volume",IDC_STATIC,118,98,24,8
+    LTEXT           "Pan",IDC_STATIC,152,98,14,8
+    CONTROL         "Mute",IDC_MUTE2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,128,113,32,10
+    EDITTEXT        IDC_TRACK3,186,39,69,12,ES_AUTOHSCROLL
+    CONTROL         "Slider1",IDC_VOLUME3,"msctls_trackbar32",TBS_VERT | WS_TABSTOP,204,57,9,42
+    CONTROL         "Slider1",IDC_PAN3,"msctls_trackbar32",TBS_VERT | WS_TABSTOP,232,57,9,42
+    LTEXT           "Volume",IDC_STATIC,196,98,24,8
+    LTEXT           "Pan",IDC_STATIC,230,98,14,8
+    CONTROL         "Mute",IDC_MUTE3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,206,113,32,10
+    EDITTEXT        IDC_TRACK4,266,39,69,12,ES_AUTOHSCROLL
+    CONTROL         "Slider1",IDC_VOLUME4,"msctls_trackbar32",TBS_VERT | WS_TABSTOP,284,57,9,42
+    CONTROL         "Slider1",IDC_PAN4,"msctls_trackbar32",TBS_VERT | WS_TABSTOP,312,57,9,42
+    LTEXT           "Volume",IDC_STATIC,276,98,24,8
+    LTEXT           "Pan",IDC_STATIC,310,98,14,8
+    CONTROL         "Mute",IDC_MUTE4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,286,113,32,10
+    EDITTEXT        IDC_TRACK5,30,138,69,12,ES_AUTOHSCROLL
+    CONTROL         "Slider1",IDC_VOLUME5,"msctls_trackbar32",TBS_VERT | WS_TABSTOP,48,154,9,42
+    CONTROL         "Slider1",IDC_PAN5,"msctls_trackbar32",TBS_VERT | WS_TABSTOP,76,154,9,42
+    LTEXT           "Volume",IDC_STATIC,40,197,24,8
+    LTEXT           "Pan",IDC_STATIC,74,197,14,8
+    CONTROL         "Mute",IDC_MUTE5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,50,210,32,10
+    EDITTEXT        IDC_TRACK6,110,138,69,12,ES_AUTOHSCROLL
+    CONTROL         "Slider1",IDC_VOLUME6,"msctls_trackbar32",TBS_VERT | WS_TABSTOP,128,154,9,42
+    CONTROL         "Slider1",IDC_PAN6,"msctls_trackbar32",TBS_VERT | WS_TABSTOP,156,154,9,42
+    LTEXT           "Volume",IDC_STATIC,120,197,24,8
+    LTEXT           "Pan",IDC_STATIC,154,197,14,8
+    CONTROL         "Mute",IDC_MUTE6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,130,210,32,10
+    EDITTEXT        IDC_TRACK7,186,138,69,12,ES_AUTOHSCROLL
+    CONTROL         "Slider1",IDC_VOLUME7,"msctls_trackbar32",TBS_VERT | WS_TABSTOP,204,154,9,42
+    CONTROL         "Slider1",IDC_PAN7,"msctls_trackbar32",TBS_VERT | WS_TABSTOP,232,154,9,42
+    LTEXT           "Volume",IDC_STATIC,196,197,24,8
+    LTEXT           "Pan",IDC_STATIC,230,197,14,8
+    CONTROL         "Mute",IDC_MUTE7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,206,210,32,10
+    EDITTEXT        IDC_TRACK8,264,138,69,12,ES_AUTOHSCROLL
+    CONTROL         "Slider1",IDC_VOLUME8,"msctls_trackbar32",TBS_VERT | WS_TABSTOP,282,154,9,42
+    CONTROL         "Slider1",IDC_PAN8,"msctls_trackbar32",TBS_VERT | WS_TABSTOP,310,154,9,42
+    LTEXT           "Volume",IDC_STATIC,274,197,24,8
+    LTEXT           "Pan",IDC_STATIC,308,197,14,8
+    CONTROL         "Mute",IDC_MUTE8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,284,210,32,10
+    CONTROL         157,IDC_STATIC,"Static",SS_BITMAP,0,0,73,28,WS_EX_TRANSPARENT
+END
+
+IDD_SPLASH DIALOGEX 0, 0, 243, 123
+STYLE DS_ABSALIGN | DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | WS_POPUP
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_CONTROLPARENT | WS_EX_STATICEDGE
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         136,IDC_SPLASHPIC,"Static",SS_BITMAP,0,0,243,123
+END
+
+IDD_SETUP DIALOG  0, 0, 243, 95
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Welcome to Trak"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Welcome to Trak.  Select from the following:",IDC_STATIC,7,7,148,8
+    RADIOBUTTON     "Start a new project",IDC_NEWPROJECT,7,17,140,10,NOT WS_VISIBLE
+    GROUPBOX        "Select Recording Type",IDC_STATIC,7,31,114,57
+    RADIOBUTTON     "16 Bit",IDC_16BIT,17,52,34,10
+    RADIOBUTTON     "8 Bit",IDC_8BIT,17,66,30,10
+    RADIOBUTTON     "44 kHz",IDC_44KHZ,66,44,39,10
+    RADIOBUTTON     "22 kHz",IDC_22KHZ,66,58,39,10
+    RADIOBUTTON     "11 kHz",IDC_11KHZ,66,71,39,10
+    LTEXT           "Project name:",IDC_STATIC,127,42,83,8
+    EDITTEXT        IDC_PROJNAME,127,54,109,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Browse",IDC_BROWSE,155,74,50,14
+    DEFPUSHBUTTON   "OK",IDOK,186,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,186,24,50,14
+END
+
+IDD_PREFERENCES DIALOGEX 0, 0, 249, 210
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "Trak Audio Preferences"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,192,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,192,24,50,14
+    GROUPBOX        "Waveform Devices",IDC_STATIC,7,7,170,76
+    COMBOBOX        IDC_PLAYDEV,15,32,148,48,CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Select the desired playback device:",IDC_STATIC,15,19,116,8
+    LTEXT           "Select the desired recording device:",IDC_STATIC,15,53,114,8
+    COMBOBOX        IDC_RECDEV,15,64,148,46,CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Playback Options",IDC_STATIC,7,89,171,62
+    GROUPBOX        "Recording Options",IDC_STATIC,7,157,172,40
+    LTEXT           "Number of playback buffers:",IDC_STATIC,15,102,90,8
+    LTEXT           "Size of playback buffer (KB):",IDC_STATIC,15,118,90,8
+    CONTROL         "Enable Synchronous Playback",IDC_SYNCPLAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,35,135,113,10
+    EDITTEXT        IDC_NUMPLAYBUFF,109,100,36,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_PLAYBUFFSIZE,109,115,36,13,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Size of record buffer (KB):",IDC_STATIC,17,178,82,8
+    EDITTEXT        IDC_RECBUFFSIZE,101,176,40,12,ES_AUTOHSCROLL | ES_NUMBER
+END
+
+IDD_VU DIALOG  0, 0, 200, 73
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "VU Monitor"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,75,52,50,14
+    CONTROL         143,IDC_STATIC,"Static",SS_BITMAP,16,39,167,6
+    LTEXT           "Adjust the input levels so they do not clip",IDC_STATIC,35,7,129,8
+    CONTROL         "Progress1",IDC_LEVELBAR,"msctls_progress32",WS_BORDER,16,22,168,14
+END
+
+IDD_RECORD DIALOGEX 0, 0, 135, 139
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "Record Track"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,14,118,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,74,118,50,14
+    LTEXT           "Recording Type:",IDC_STATIC,13,7,54,8
+    EDITTEXT        IDC_PROPS,7,17,66,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    RADIOBUTTON     "Stereo",IDC_STEREO,87,17,37,10
+    RADIOBUTTON     "Mono",IDC_MONO,87,29,37,10
+    GROUPBOX        "Recording Track",IDC_STATIC,7,46,123,68
+    RADIOBUTTON     "New Track",IDC_NEWTRACK,42,56,51,10
+    RADIOBUTTON     "Track 1",IDC_TRACK1,15,71,41,10
+    RADIOBUTTON     "Track 2",IDC_TRACK2,15,81,41,10
+    RADIOBUTTON     "Track 3",IDC_TRACK3,15,91,41,10
+    RADIOBUTTON     "Track 4",IDC_TRACK4,15,101,41,10
+    RADIOBUTTON     "Track 5",IDC_TRACK5,79,70,41,10
+    RADIOBUTTON     "Track 6",IDC_TRACK6,79,80,41,10
+    RADIOBUTTON     "Track 7",IDC_TRACK7,79,90,41,10
+    RADIOBUTTON     "Track 8",IDC_TRACK8,79,100,41,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 2,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Copyright 2009. "
+            VALUE "CompanyName", "Rivers Edge Software"
+            VALUE "FileDescription", "Trak Multitracking System"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "Trak"
+            VALUE "LegalCopyright", "Copyright (C) 2009"
+            VALUE "OriginalFilename", "Trak.exe"
+            VALUE "ProductName", "Trak Multitracking System"
+            VALUE "ProductVersion", "2, 0, 0, 2"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_TRAKMAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 332
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_SPLASH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 116
+    END
+
+    IDD_SETUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_PREFERENCES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 242
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_VU, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 66
+    END
+
+    IDD_RECORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 132
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "Trak Multitracking System\n\nTrak\nTrak Files (*.tpj)\n.tpj\nTrak.Document\nTrak Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Trak"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PLAY                 "Play the files\nPlay"
+    ID_RECORD               "Record a new track or over an existing track\nRecord"
+    ID_STOP                 "Stop playing and recording\nStop"
+    ID_MIXER                "Open up windows mixer\nOpen Mixer"
+    ID_VU_LVL               "Monitor VU and set input levels so they don't clip\nMonitor VU Levels"
+    ID_WAVE_W               "Begin playback of tracks\nPlay"
+    ID_SAVEWAVE             "Save files mixed as a standard PCM wave file\nSave as PCM wave"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\trak.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
